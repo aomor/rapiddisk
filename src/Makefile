@@ -22,12 +22,6 @@ ifeq ($(CC),)
 	CC := gcc -Werror
 endif
 
-ifneq ("$(wildcard /etc/redhat-release)", "")
-	RH_VER_NUM := $(shell /bin/grep -o [0-9].[0-9] /etc/redhat-release|cut -d'.' -f1)
-else
-	RH_VER_NUM := 0
-endif
-
 CHMOD := chmod
 CP := cp
 RM := rm -f
